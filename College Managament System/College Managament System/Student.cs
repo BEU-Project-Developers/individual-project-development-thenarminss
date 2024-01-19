@@ -68,7 +68,7 @@ namespace College_Managament_System
 
         }
 
-        //private void maskedTextBox5_MaskInputRejected(object sender, MaskInputRejectedEventArgs e){}
+        
         
 
         private void guna2Button1_Click(object sender, EventArgs e)
