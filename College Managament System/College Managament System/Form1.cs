@@ -46,5 +46,10 @@ namespace College_Managament_System
 
             }
         }
+
+        private void guna2HtmlLabel1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -58,6 +58,7 @@
             guna2HtmlLabel1.Size = new Size(332, 39);
             guna2HtmlLabel1.TabIndex = 9;
             guna2HtmlLabel1.Text = "BEU Management System";
+            guna2HtmlLabel1.Click += guna2HtmlLabel1_Click_1;
             // 
             // guna2HtmlLabel2
             // 
