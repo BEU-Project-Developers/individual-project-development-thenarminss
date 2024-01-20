@@ -30,19 +30,15 @@ namespace College_Managament_System
             var dataTable = dbContext.ExecuteQuery(query);
 
             // Set the DataTable as the DataSource for your DataGridView
-            Depguna2DataGridView.DataSource = dataTable;
+            DepDGV.DataSource = dataTable;
 
         }
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void DepPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void guna2Button1_Click_1(object sender, EventArgs e)
+        private void Button1_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -64,12 +60,12 @@ namespace College_Managament_System
             }
         }
 
-        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
+        private void Label6_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void guna2Button3_Click_1(object sender, EventArgs e)
+        private void Button2_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -91,7 +87,7 @@ namespace College_Managament_System
             }
         }
 
-        private void guna2Button4_Click_1(object sender, EventArgs e)
+        private void Button3_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -114,14 +110,14 @@ namespace College_Managament_System
             }
         }
 
-        private void Depguna2DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DepDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DepNameguna2TextBox.Text = Depguna2DataGridView.SelectedRows[0].Cells[0].Value.ToString();
-            DepDescriptionguna2TextBox.Text = Depguna2DataGridView.SelectedRows[0].Cells[1].Value.ToString();
-            DepDurationguna2TextBox.Text = Depguna2DataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            DepNameguna2TextBox.Text = DepDGV.SelectedRows[0].Cells[0].Value.ToString();
+            DepDescriptionguna2TextBox.Text = DepDGV.SelectedRows[0].Cells[1].Value.ToString();
+            DepDurationguna2TextBox.Text = DepDGV.SelectedRows[0].Cells[2].Value.ToString();
         }
 
-        private void guna2Button2_Click_1(object sender, EventArgs e)
+        private void Button4_Click_1(object sender, EventArgs e)
         {
             Mainform home = new Mainform();
             home.Show();

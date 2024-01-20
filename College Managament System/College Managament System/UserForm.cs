@@ -32,24 +32,24 @@ namespace College_Managament_System
             var dataTable = dbContext.ExecuteQuery(query);
 
             // Set the DataTable as the DataSource for your DataGridView
-            Userguna2DataGridView.DataSource = dataTable;
+            UserDGV.DataSource = dataTable;
 
         }
 
-        private void UIDguna2TextBox_TextChanged(object sender, EventArgs e)
+        private void UIdTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
-        private void UNameguna2TextBox_TextChanged(object sender, EventArgs e)
+        private void UNameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
-        private void UPasswguna2TextBox_TextChanged(object sender, EventArgs e)
+        private void UPasswordTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
         
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             Mainform home = new Mainform();
             home.Show();
@@ -59,17 +59,17 @@ namespace College_Managament_System
         {
 
         }
-        private void guna2Button1_Click_1(object sender, EventArgs e)
+        private void Button1_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (UIDguna2TextBox.Text == "" || UNameguna2TextBox.Text == "" || UPasswguna2TextBox.Text == "")
+                if (UIdTextBox.Text == "" || UNameTextBox.Text == "" || UPasswordTextBox.Text == "")
                 {
                     MessageBox.Show("Missing Information");
                 }
                 else
                 {
-                    string query = $"insert into UserTable values( '{UIDguna2TextBox.Text}','{UNameguna2TextBox.Text}', '{UPasswguna2TextBox.Text}')";
+                    string query = $"insert into UserTable values( '{UIdTextBox.Text}','{UNameTextBox.Text}', '{UPasswordTextBox.Text}')";
                     dbContext.ExecuteNonQuery(query);
                     MessageBox.Show("User Successfully Added");
                     populate();
@@ -81,30 +81,30 @@ namespace College_Managament_System
             }
         }
 
-        private void Userguna2DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void UserDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            UIDguna2TextBox.Text = Userguna2DataGridView.SelectedRows[0].Cells[0].Value.ToString();
-            UNameguna2TextBox.Text = Userguna2DataGridView.SelectedRows[0].Cells[1].Value.ToString();
-            UPasswguna2TextBox.Text = Userguna2DataGridView.SelectedRows[0].Cells[2].Value.ToString();
+            UIdTextBox.Text = UserDGV.SelectedRows[0].Cells[0].Value.ToString();
+            UNameTextBox.Text = UserDGV.SelectedRows[0].Cells[1].Value.ToString();
+            UPasswordTextBox.Text = UserDGV.SelectedRows[0].Cells[2].Value.ToString();
         }
 
-        private void guna2HtmlLabel7_Click_1(object sender, EventArgs e)
+        private void Label6_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void guna2Button4_Click_1(object sender, EventArgs e)
+        private void Button3_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (UIDguna2TextBox.Text == "")
+                if (UIdTextBox.Text == "")
                 {
                     MessageBox.Show("Enter The User Id");
                 }
                 else
                 {
 
-                    string query = $"delete from UserTable where UserId = ( '{UIDguna2TextBox.Text}')";
+                    string query = $"delete from UserTable where UserId = ( '{UIdTextBox.Text}')";
                     dbContext.ExecuteNonQuery(query);
                     MessageBox.Show("User Deleted Successfuly");
                     populate();
@@ -116,17 +116,17 @@ namespace College_Managament_System
             }
         }
 
-        private void guna2Button3_Click_1(object sender, EventArgs e)
+        private void Button2_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (UIDguna2TextBox.Text == "" || UNameguna2TextBox.Text == "" || UPasswguna2TextBox.Text == "")
+                if (UIdTextBox.Text == "" || UNameTextBox.Text == "" || UPasswordTextBox.Text == "")
                 {
                     MessageBox.Show("Missing Data");
                 }
                 else
                 {
-                    string query = $"update UserTable set UserName = ('{UNameguna2TextBox.Text}'), password = ('{UPasswguna2TextBox.Text}') where UserId = ('{UIDguna2TextBox.Text}')";
+                    string query = $"update UserTable set UserName = ('{UNameTextBox.Text}'), password = ('{UPasswordTextBox.Text}') where UserId = ('{UIdTextBox.Text}')";
                     dbContext.ExecuteNonQuery(query);
                     MessageBox.Show("User Updated Successfully");
                     populate();

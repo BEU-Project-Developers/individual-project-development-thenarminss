@@ -30,8 +30,8 @@ namespace College_Managament_System
 
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
-                guna2ComboBox2.ValueMember = "DepName";
-                guna2ComboBox2.DataSource = dataTable;
+                DepComboBox.ValueMember = "DepName";
+                DepComboBox.DataSource = dataTable;
             }
             else
             {
@@ -47,34 +47,29 @@ namespace College_Managament_System
             var dataTable = dbContext.ExecuteQuery(query);
 
             // Set the DataTable as the DataSource for your DataGridView
-            Studentguna2DataGridView.DataSource = dataTable;
+            StdDGV.DataSource = dataTable;
 
         }
 
-        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void StdDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
 
         }
-        private void guna2Button2_Click1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel11_Click_1(object sender, EventArgs e)
+        private void Label10_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        private void guna2Button3_Click_1(object sender, EventArgs e)
+        private void Button3_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (SIDguna2TextBox.Text == "" || SNameguna2TextBox.Text == "" || SFeeguna2TextBox.Text == "" || SPhoneguna2TextBox.Text == "")
+                if (StdIdTextBox.Text == "" || StdNameTextBox.Text == "" || StdFeesTextBox.Text == "" || StdPhoneTextBox.Text == "")
                 {
                     MessageBox.Show("Missing Data");
                 }
                 else
                 {
-                    string query = $"update StudentTable set StdName = '{SNameguna2TextBox.Text}', StdGender = '{guna2ComboBox1.SelectedItem.ToString()}', StdDOB = '{guna2DateTimePicker1.Text}', StdPhone = '{SPhoneguna2TextBox.Text}', StdDep = '{guna2ComboBox2.SelectedValue.ToString()}', StdFees = '{SFeeguna2TextBox.Text}' where StdId = '{SIDguna2TextBox.Text}'";
+                    string query = $"update StudentTable set StdName = '{StdNameTextBox.Text}', StdGender = '{GenderComboBox.SelectedItem.ToString()}', StdDOB = '{StdDateTimePicker.Text}', StdPhone = '{StdPhoneTextBox.Text}', StdDep = '{DepComboBox.SelectedValue.ToString()}', StdFees = '{StdFeesTextBox.Text}' where StdId = '{StdIdTextBox.Text}'";
                     dbContext.ExecuteNonQuery(query);
                     MessageBox.Show("Student Updated Successfully");
                     populate();
@@ -87,17 +82,17 @@ namespace College_Managament_System
         }
 
 
-        private void guna2Button4_Click_1(object sender, EventArgs e)
+        private void Button2_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (SIDguna2TextBox.Text == "")
+                if (StdIdTextBox.Text == "")
                 {
                     MessageBox.Show("Enter The Student's Id");
                 }
                 else
                 {
-                    string query = $"delete from StudentTable where StdId = ( '{SIDguna2TextBox.Text}')";
+                    string query = $"delete from StudentTable where StdId = ( '{StdIdTextBox.Text}')";
                     dbContext.ExecuteNonQuery(query);
                     MessageBox.Show("Student Deleted Successfuly");
                     populate();
@@ -109,33 +104,33 @@ namespace College_Managament_System
             }
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             Mainform home = new Mainform();
             home.Show();
             this.Hide();
         }
 
-        private void Studentguna2DataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void StdDGV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            SIDguna2TextBox.Text = Studentguna2DataGridView.SelectedRows[0].Cells[0].Value.ToString();
-            SNameguna2TextBox.Text = Studentguna2DataGridView.SelectedRows[0].Cells[1].Value.ToString();
-            guna2ComboBox1.SelectedItem = Studentguna2DataGridView.SelectedRows[0].Cells[2].Value.ToString();
-            SPhoneguna2TextBox.Text = Studentguna2DataGridView.SelectedRows[0].Cells[4].Value.ToString();
-            SFeeguna2TextBox.Text = Studentguna2DataGridView.SelectedRows[0].Cells[6].Value.ToString();
+            StdIdTextBox.Text = StdDGV.SelectedRows[0].Cells[0].Value.ToString();
+            StdNameTextBox.Text = StdDGV.SelectedRows[0].Cells[1].Value.ToString();
+            GenderComboBox.SelectedItem = StdDGV.SelectedRows[0].Cells[2].Value.ToString();
+            StdPhoneTextBox.Text = StdDGV.SelectedRows[0].Cells[4].Value.ToString();
+            StdFeesTextBox.Text = StdDGV.SelectedRows[0].Cells[6].Value.ToString();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if (SIDguna2TextBox.Text == "" || SNameguna2TextBox.Text == "" || SPhoneguna2TextBox.Text == "" || SFeeguna2TextBox.Text == "")
+                if (StdIdTextBox.Text == "" || StdNameTextBox.Text == "" || StdPhoneTextBox.Text == "" || StdFeesTextBox.Text == "")
                 {
                     MessageBox.Show("Missing Data");
                 }
                 else
                 {
-                    string query = $"insert into StudentTable values( '{SIDguna2TextBox.Text}','{SNameguna2TextBox.Text}', '{guna2ComboBox1.SelectedItem.ToString()}','{guna2DateTimePicker1.Text}','{SPhoneguna2TextBox.Text}', '{guna2ComboBox2.SelectedValue.ToString()}' , '{SFeeguna2TextBox.Text}')";
+                    string query = $"insert into StudentTable values( '{StdIdTextBox.Text}','{StdNameTextBox.Text}', '{GenderComboBox.SelectedItem.ToString()}','{StdDateTimePicker.Text}','{StdPhoneTextBox.Text}', '{DepComboBox.SelectedValue.ToString()}' , '{StdFeesTextBox.Text}')";
                     dbContext.ExecuteNonQuery(query);
                     MessageBox.Show("Student Successfully Added");
                     populate();

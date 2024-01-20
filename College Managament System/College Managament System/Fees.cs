@@ -33,8 +33,8 @@ namespace College_Managament_System
 
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
-                guna2ComboBox1.ValueMember = "StdId";
-                guna2ComboBox1.DataSource = dataTable;
+                StdIdComboBox.ValueMember = "StdId";
+                StdIdComboBox.DataSource = dataTable;
             }
             else
             {
@@ -43,16 +43,16 @@ namespace College_Managament_System
             }
         }
 
-        private void guna2ComboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        private void StdIdComboBox_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string query = "select * from StudentTable where StdId = ('{guna2ComboBox1.SelectedValue.ToString()}')";
+            string query = "select * from StudentTable where StdId = ('{StdIdComboBox.SelectedValue.ToString()}')";
             SqlCommand cmd = new SqlCommand(query);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                FNameguna2TextBox.Text = dr["StdName"].ToString();
+                FeesNameTextBox.Text = dr["StdName"].ToString();
             }
         }
 
@@ -64,10 +64,10 @@ namespace College_Managament_System
             var dataTable = dbContext.ExecuteQuery(query);
 
             // Set the DataTable as the DataSource for your DataGridView
-            Feesguna2DataGridView.DataSource = dataTable;
+            FeesDGV.DataSource = dataTable;
 
         }
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Feespanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -76,12 +76,12 @@ namespace College_Managament_System
 
         private void updatestd()
         {
-            string query = $"update StudentTable set StdFees = ('{FAmountguna2TextBox.Text}') where StdId = ('{guna2ComboBox1.SelectedValue.ToString()}')";
+            string query = $"update StudentTable set StdFees = ('{FeesAmountTextBox.Text}') where StdId = ('{StdIdComboBox.SelectedValue.ToString()}')";
             dbContext.ExecuteNonQuery(query);
             //MessageBox.Show("User Updated Successfully");
             //populate();
         }
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             Mainform home = new Mainform();
             home.Show();
@@ -89,22 +89,22 @@ namespace College_Managament_System
         }
 
 
-        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
+        private void Label8_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void FeesDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Feesguna2DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FeesDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-//        private void guna2Button1_Click(object sender, EventArgs e)
+//        private void Button1_Click(object sender, EventArgs e)
 //{
 //    try
 //    {

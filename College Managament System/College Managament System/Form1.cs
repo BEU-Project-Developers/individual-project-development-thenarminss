@@ -11,12 +11,10 @@ namespace College_Managament_System
         {
             timer1.Start();
         }
-
-        private void progressBar1_Click_1(object sender, EventArgs e)
+        private void MyprogressBar_Click_1(object sender, EventArgs e)
         {
 
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             startpos += 1;
@@ -28,13 +26,7 @@ namespace College_Managament_System
                 login log = new login();
                 log.Show();
                 this.Hide();
-
             }
-        }
-
-        private void guna2HtmlLabel1_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
