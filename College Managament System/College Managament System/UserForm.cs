@@ -14,21 +14,16 @@ namespace College_Managament_System
 {
     public partial class UserForm : Form
     {
-        private readonly DatabaseContext dbContext = new DatabaseContext(); 
+        private readonly DatabaseContext dbContext = new DatabaseContext();
         public UserForm()
         {
             InitializeComponent();
-        }
-        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\dbCMS.mdf;Integrated Security=True");
+        }        
         private void UserForm_Load(object sender, EventArgs e)
         {
             populate();
-
-
-            
-            
         }
-       
+
         private void populate()
         {
             string query = "select * from UserTable";
@@ -38,6 +33,7 @@ namespace College_Managament_System
 
             // Set the DataTable as the DataSource for your DataGridView
             Userguna2DataGridView.DataSource = dataTable;
+
         }
 
         private void UIDguna2TextBox_TextChanged(object sender, EventArgs e)
@@ -52,42 +48,16 @@ namespace College_Managament_System
         {
 
         }
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-
+            Mainform home = new Mainform();
+            home.Show();
+            this.Hide();
         }
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
@@ -99,16 +69,72 @@ namespace College_Managament_System
                 }
                 else
                 {
-                    //Con.Open();
-                    string query = $"insert into UserTable values( '{ UIDguna2TextBox.Text }','{ UNameguna2TextBox.Text }', '{ UPasswguna2TextBox.Text }')";
+                    string query = $"insert into UserTable values( '{UIDguna2TextBox.Text}','{UNameguna2TextBox.Text}', '{UPasswguna2TextBox.Text}')";
                     dbContext.ExecuteNonQuery(query);
                     MessageBox.Show("User Successfully Added");
-                    //Con.Close();
+                    populate();
                 }
             }
             catch
             {
                 MessageBox.Show("Something Went Wrong");
+            }
+        }
+
+        private void Userguna2DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UIDguna2TextBox.Text = Userguna2DataGridView.SelectedRows[0].Cells[0].Value.ToString();
+            UNameguna2TextBox.Text = Userguna2DataGridView.SelectedRows[0].Cells[1].Value.ToString();
+            UPasswguna2TextBox.Text = Userguna2DataGridView.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void guna2HtmlLabel7_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void guna2Button4_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (UIDguna2TextBox.Text == "")
+                {
+                    MessageBox.Show("Enter The User Id");
+                }
+                else
+                {
+
+                    string query = $"delete from UserTable where UserId = ( '{UIDguna2TextBox.Text}')";
+                    dbContext.ExecuteNonQuery(query);
+                    MessageBox.Show("User Deleted Successfuly");
+                    populate();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ooops... User Not Deleted");
+            }
+        }
+
+        private void guna2Button3_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (UIDguna2TextBox.Text == "" || UNameguna2TextBox.Text == "" || UPasswguna2TextBox.Text == "")
+                {
+                    MessageBox.Show("Missing Data");
+                }
+                else
+                {
+                    string query = $"update UserTable set UserName = ('{UNameguna2TextBox.Text}'), password = ('{UPasswguna2TextBox.Text}') where UserId = ('{UIDguna2TextBox.Text}')";
+                    dbContext.ExecuteNonQuery(query);
+                    MessageBox.Show("User Updated Successfully");
+                    populate();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ooops... User Not Updated");
             }
         }
     }

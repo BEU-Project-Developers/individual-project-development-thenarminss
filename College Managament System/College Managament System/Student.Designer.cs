@@ -72,18 +72,18 @@
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            Userguna2DataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            Studentguna2DataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            UIDguna2TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            SIDguna2TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            SFeeguna2TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            SNameguna2TextBox = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            SPhoneguna2TextBox = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Userguna2DataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Studentguna2DataGridView).BeginInit();
             SuspendLayout();
             // 
             // guna2Button4
@@ -104,6 +104,7 @@
             guna2Button4.Size = new Size(108, 36);
             guna2Button4.TabIndex = 130;
             guna2Button4.Text = "Delete";
+            guna2Button4.Click += guna2Button4_Click_1;
             // 
             // guna2Button3
             // 
@@ -123,6 +124,7 @@
             guna2Button3.Size = new Size(108, 36);
             guna2Button3.TabIndex = 129;
             guna2Button3.Text = "Edit";
+            guna2Button3.Click += guna2Button3_Click_1;
             // 
             // guna2Button2
             // 
@@ -142,6 +144,7 @@
             guna2Button2.Size = new Size(108, 36);
             guna2Button2.TabIndex = 128;
             guna2Button2.Text = "Home";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2Button1
             // 
@@ -161,6 +164,7 @@
             guna2Button1.Size = new Size(108, 36);
             guna2Button1.TabIndex = 127;
             guna2Button1.Text = "Add";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2HtmlLabel7
             // 
@@ -251,6 +255,7 @@
             guna2HtmlLabel11.Size = new Size(18, 39);
             guna2HtmlLabel11.TabIndex = 96;
             guna2HtmlLabel11.Text = "x";
+            guna2HtmlLabel11.Click += guna2HtmlLabel11_Click_1;
             // 
             // guna2HtmlLabel10
             // 
@@ -285,10 +290,10 @@
             guna2HtmlLabel1.TabIndex = 117;
             guna2HtmlLabel1.Text = "Id";
             // 
-            // Userguna2DataGridView
+            // Studentguna2DataGridView
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            Userguna2DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            Studentguna2DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -296,9 +301,9 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            Userguna2DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            Userguna2DataGridView.ColumnHeadersHeight = 4;
-            Userguna2DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            Studentguna2DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            Studentguna2DataGridView.ColumnHeadersHeight = 30;
+            Studentguna2DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -306,168 +311,123 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            Userguna2DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            Userguna2DataGridView.GridColor = Color.FromArgb(231, 229, 255);
-            Userguna2DataGridView.Location = new Point(579, 216);
-            Userguna2DataGridView.Name = "Userguna2DataGridView";
-            Userguna2DataGridView.RowHeadersVisible = false;
-            Userguna2DataGridView.RowHeadersWidth = 51;
-            Userguna2DataGridView.RowTemplate.Height = 29;
-            Userguna2DataGridView.Size = new Size(512, 449);
-            Userguna2DataGridView.TabIndex = 119;
-            Userguna2DataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            Userguna2DataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            Userguna2DataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            Userguna2DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            Userguna2DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            Userguna2DataGridView.ThemeStyle.BackColor = Color.White;
-            Userguna2DataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            Userguna2DataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            Userguna2DataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            Userguna2DataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Userguna2DataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            Userguna2DataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            Userguna2DataGridView.ThemeStyle.HeaderStyle.Height = 4;
-            Userguna2DataGridView.ThemeStyle.ReadOnly = false;
-            Userguna2DataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
-            Userguna2DataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            Userguna2DataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Userguna2DataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            Userguna2DataGridView.ThemeStyle.RowsStyle.Height = 29;
-            Userguna2DataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            Userguna2DataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            Studentguna2DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            Studentguna2DataGridView.GridColor = Color.FromArgb(231, 229, 255);
+            Studentguna2DataGridView.Location = new Point(484, 216);
+            Studentguna2DataGridView.Name = "Studentguna2DataGridView";
+            Studentguna2DataGridView.RowHeadersVisible = false;
+            Studentguna2DataGridView.RowHeadersWidth = 51;
+            Studentguna2DataGridView.RowTemplate.Height = 29;
+            Studentguna2DataGridView.Size = new Size(607, 449);
+            Studentguna2DataGridView.TabIndex = 119;
+            Studentguna2DataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            Studentguna2DataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            Studentguna2DataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            Studentguna2DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            Studentguna2DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            Studentguna2DataGridView.ThemeStyle.BackColor = Color.White;
+            Studentguna2DataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            Studentguna2DataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            Studentguna2DataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            Studentguna2DataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Studentguna2DataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            Studentguna2DataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            Studentguna2DataGridView.ThemeStyle.HeaderStyle.Height = 30;
+            Studentguna2DataGridView.ThemeStyle.ReadOnly = false;
+            Studentguna2DataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
+            Studentguna2DataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            Studentguna2DataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Studentguna2DataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            Studentguna2DataGridView.ThemeStyle.RowsStyle.Height = 29;
+            Studentguna2DataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            Studentguna2DataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            Studentguna2DataGridView.CellContentClick += Studentguna2DataGridView_CellContentClick_1;
             // 
             // guna2HtmlLabel8
             // 
             guna2HtmlLabel8.BackColor = Color.Transparent;
             guna2HtmlLabel8.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel8.ForeColor = Color.Navy;
-            guna2HtmlLabel8.Location = new Point(765, 171);
+            guna2HtmlLabel8.Location = new Point(705, 171);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             guna2HtmlLabel8.Size = new Size(155, 39);
             guna2HtmlLabel8.TabIndex = 118;
             guna2HtmlLabel8.Text = "Students list";
             // 
-            // guna2TextBox4
+            // SIDguna2TextBox
             // 
-            guna2TextBox4.BackColor = Color.Transparent;
-            guna2TextBox4.BorderRadius = 8;
-            guna2TextBox4.CustomizableEdges = customizableEdges11;
-            guna2TextBox4.DefaultText = "";
-            guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox4.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox4.ForeColor = Color.Navy;
-            guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Location = new Point(170, 391);
-            guna2TextBox4.Name = "guna2TextBox4";
-            guna2TextBox4.PasswordChar = '\0';
-            guna2TextBox4.PlaceholderText = "";
-            guna2TextBox4.SelectedText = "";
-            guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox4.Size = new Size(258, 36);
-            guna2TextBox4.TabIndex = 116;
+            SIDguna2TextBox.BackColor = Color.Transparent;
+            SIDguna2TextBox.BorderRadius = 8;
+            SIDguna2TextBox.CustomizableEdges = customizableEdges11;
+            SIDguna2TextBox.DefaultText = "";
+            SIDguna2TextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            SIDguna2TextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            SIDguna2TextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            SIDguna2TextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            SIDguna2TextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            SIDguna2TextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            SIDguna2TextBox.ForeColor = Color.Navy;
+            SIDguna2TextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            SIDguna2TextBox.Location = new Point(170, 171);
+            SIDguna2TextBox.Name = "SIDguna2TextBox";
+            SIDguna2TextBox.PasswordChar = '\0';
+            SIDguna2TextBox.PlaceholderText = "";
+            SIDguna2TextBox.SelectedText = "";
+            SIDguna2TextBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            SIDguna2TextBox.Size = new Size(258, 36);
+            SIDguna2TextBox.TabIndex = 115;
             // 
-            // guna2TextBox3
+            // SFeeguna2TextBox
             // 
-            guna2TextBox3.BackColor = Color.Transparent;
-            guna2TextBox3.BorderRadius = 8;
-            guna2TextBox3.CustomizableEdges = customizableEdges13;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox3.ForeColor = Color.Navy;
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(170, 171);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PasswordChar = '\0';
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2TextBox3.Size = new Size(258, 36);
-            guna2TextBox3.TabIndex = 115;
+            SFeeguna2TextBox.BackColor = Color.Transparent;
+            SFeeguna2TextBox.BorderRadius = 8;
+            SFeeguna2TextBox.CustomizableEdges = customizableEdges13;
+            SFeeguna2TextBox.DefaultText = "";
+            SFeeguna2TextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            SFeeguna2TextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            SFeeguna2TextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            SFeeguna2TextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            SFeeguna2TextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            SFeeguna2TextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            SFeeguna2TextBox.ForeColor = Color.Navy;
+            SFeeguna2TextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            SFeeguna2TextBox.Location = new Point(170, 511);
+            SFeeguna2TextBox.Name = "SFeeguna2TextBox";
+            SFeeguna2TextBox.PasswordChar = '\0';
+            SFeeguna2TextBox.PlaceholderText = "";
+            SFeeguna2TextBox.SelectedText = "";
+            SFeeguna2TextBox.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            SFeeguna2TextBox.Size = new Size(258, 36);
+            SFeeguna2TextBox.TabIndex = 113;
             // 
-            // guna2TextBox2
+            // SNameguna2TextBox
             // 
-            guna2TextBox2.BackColor = Color.Transparent;
-            guna2TextBox2.BorderRadius = 8;
-            guna2TextBox2.CustomizableEdges = customizableEdges15;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox2.ForeColor = Color.Navy;
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(170, 451);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2TextBox2.Size = new Size(258, 36);
-            guna2TextBox2.TabIndex = 114;
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.BackColor = Color.Transparent;
-            guna2TextBox1.BorderRadius = 8;
-            guna2TextBox1.CustomizableEdges = customizableEdges17;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox1.ForeColor = Color.Navy;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(170, 511);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2TextBox1.Size = new Size(258, 36);
-            guna2TextBox1.TabIndex = 113;
-            // 
-            // UIDguna2TextBox
-            // 
-            UIDguna2TextBox.BackColor = Color.Transparent;
-            UIDguna2TextBox.BorderRadius = 8;
-            UIDguna2TextBox.CustomizableEdges = customizableEdges19;
-            UIDguna2TextBox.DefaultText = "";
-            UIDguna2TextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            UIDguna2TextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            UIDguna2TextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            UIDguna2TextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            UIDguna2TextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            UIDguna2TextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            UIDguna2TextBox.ForeColor = Color.Navy;
-            UIDguna2TextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            UIDguna2TextBox.Location = new Point(170, 225);
-            UIDguna2TextBox.Name = "UIDguna2TextBox";
-            UIDguna2TextBox.PasswordChar = '\0';
-            UIDguna2TextBox.PlaceholderText = "";
-            UIDguna2TextBox.SelectedText = "";
-            UIDguna2TextBox.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            UIDguna2TextBox.Size = new Size(258, 36);
-            UIDguna2TextBox.TabIndex = 112;
+            SNameguna2TextBox.BackColor = Color.Transparent;
+            SNameguna2TextBox.BorderRadius = 8;
+            SNameguna2TextBox.CustomizableEdges = customizableEdges15;
+            SNameguna2TextBox.DefaultText = "";
+            SNameguna2TextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            SNameguna2TextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            SNameguna2TextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            SNameguna2TextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            SNameguna2TextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            SNameguna2TextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            SNameguna2TextBox.ForeColor = Color.Navy;
+            SNameguna2TextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            SNameguna2TextBox.Location = new Point(170, 225);
+            SNameguna2TextBox.Name = "SNameguna2TextBox";
+            SNameguna2TextBox.PasswordChar = '\0';
+            SNameguna2TextBox.PlaceholderText = "";
+            SNameguna2TextBox.SelectedText = "";
+            SNameguna2TextBox.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            SNameguna2TextBox.Size = new Size(258, 36);
+            SNameguna2TextBox.TabIndex = 112;
             // 
             // guna2ComboBox1
             // 
             guna2ComboBox1.BackColor = Color.Transparent;
             guna2ComboBox1.BorderRadius = 8;
-            guna2ComboBox1.CustomizableEdges = customizableEdges21;
+            guna2ComboBox1.CustomizableEdges = customizableEdges17;
             guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
             guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -475,9 +435,10 @@
             guna2ComboBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             guna2ComboBox1.ForeColor = Color.FromArgb(68, 88, 112);
             guna2ComboBox1.ItemHeight = 30;
+            guna2ComboBox1.Items.AddRange(new object[] { "Male", "Female" });
             guna2ComboBox1.Location = new Point(170, 281);
             guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2ComboBox1.Size = new Size(258, 36);
             guna2ComboBox1.TabIndex = 110;
             // 
@@ -485,7 +446,7 @@
             // 
             guna2DateTimePicker1.BorderRadius = 8;
             guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges23;
+            guna2DateTimePicker1.CustomizableEdges = customizableEdges19;
             guna2DateTimePicker1.FillColor = Color.DodgerBlue;
             guna2DateTimePicker1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2DateTimePicker1.ForeColor = Color.White;
@@ -494,20 +455,62 @@
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2DateTimePicker1.Size = new Size(258, 36);
             guna2DateTimePicker1.TabIndex = 111;
             guna2DateTimePicker1.Value = new DateTime(2024, 1, 18, 23, 0, 25, 399);
+            //guna2DateTimePicker1.ValueChanged += guna2DateTimePicker1_ValueChanged_1;
             // 
             // guna2Panel2
             // 
             guna2Panel2.BackColor = Color.Navy;
-            guna2Panel2.CustomizableEdges = customizableEdges25;
+            guna2Panel2.CustomizableEdges = customizableEdges21;
             guna2Panel2.Location = new Point(0, 696);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2Panel2.Size = new Size(1128, 16);
             guna2Panel2.TabIndex = 131;
+            // 
+            // guna2ComboBox2
+            // 
+            guna2ComboBox2.BackColor = Color.Transparent;
+            guna2ComboBox2.BorderRadius = 8;
+            guna2ComboBox2.CustomizableEdges = customizableEdges23;
+            guna2ComboBox2.DrawMode = DrawMode.OwnerDrawFixed;
+            guna2ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            guna2ComboBox2.FocusedColor = Color.FromArgb(94, 148, 255);
+            guna2ComboBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2ComboBox2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2ComboBox2.ForeColor = Color.FromArgb(68, 88, 112);
+            guna2ComboBox2.ItemHeight = 30;
+            guna2ComboBox2.Location = new Point(170, 452);
+            guna2ComboBox2.Name = "guna2ComboBox2";
+            guna2ComboBox2.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2ComboBox2.Size = new Size(258, 36);
+            guna2ComboBox2.TabIndex = 132;
+            // 
+            // SPhoneguna2TextBox
+            // 
+            SPhoneguna2TextBox.BackColor = Color.Transparent;
+            SPhoneguna2TextBox.BorderRadius = 8;
+            SPhoneguna2TextBox.CustomizableEdges = customizableEdges25;
+            SPhoneguna2TextBox.DefaultText = "";
+            SPhoneguna2TextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            SPhoneguna2TextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            SPhoneguna2TextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            SPhoneguna2TextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            SPhoneguna2TextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            SPhoneguna2TextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            SPhoneguna2TextBox.ForeColor = Color.Navy;
+            SPhoneguna2TextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            SPhoneguna2TextBox.Location = new Point(170, 391);
+            SPhoneguna2TextBox.Name = "SPhoneguna2TextBox";
+            SPhoneguna2TextBox.PasswordChar = '\0';
+            SPhoneguna2TextBox.PlaceholderText = "";
+            SPhoneguna2TextBox.SelectedText = "";
+            SPhoneguna2TextBox.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            SPhoneguna2TextBox.Size = new Size(258, 36);
+            SPhoneguna2TextBox.TabIndex = 116;
             // 
             // Student
             // 
@@ -515,6 +518,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1128, 712);
+            Controls.Add(guna2ComboBox2);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Button4);
             Controls.Add(guna2Button3);
@@ -528,13 +532,12 @@
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2Panel1);
             Controls.Add(guna2HtmlLabel1);
-            Controls.Add(Userguna2DataGridView);
+            Controls.Add(Studentguna2DataGridView);
             Controls.Add(guna2HtmlLabel8);
-            Controls.Add(guna2TextBox4);
-            Controls.Add(guna2TextBox3);
-            Controls.Add(guna2TextBox2);
-            Controls.Add(guna2TextBox1);
-            Controls.Add(UIDguna2TextBox);
+            Controls.Add(SPhoneguna2TextBox);
+            Controls.Add(SIDguna2TextBox);
+            Controls.Add(SFeeguna2TextBox);
+            Controls.Add(SNameguna2TextBox);
             Controls.Add(guna2ComboBox1);
             Controls.Add(guna2DateTimePicker1);
             FormBorderStyle = FormBorderStyle.None;
@@ -544,7 +547,7 @@
             Load += Student_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)Userguna2DataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Studentguna2DataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -565,16 +568,16 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2DataGridView Userguna2DataGridView;
+        private Guna.UI2.WinForms.Guna2DataGridView Studentguna2DataGridView;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox UIDguna2TextBox;
+        private Guna.UI2.WinForms.Guna2TextBox SIDguna2TextBox;
+        private Guna.UI2.WinForms.Guna2TextBox SFeeguna2TextBox;
+        private Guna.UI2.WinForms.Guna2TextBox SNameguna2TextBox;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2TextBox SPhoneguna2TextBox;
     }
 }

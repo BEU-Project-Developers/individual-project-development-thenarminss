@@ -200,6 +200,7 @@
             guna2Button3.Size = new Size(108, 36);
             guna2Button3.TabIndex = 87;
             guna2Button3.Text = "Edit";
+            guna2Button3.Click += guna2Button3_Click_1;
             // 
             // guna2Button4
             // 
@@ -219,6 +220,7 @@
             guna2Button4.Size = new Size(108, 36);
             guna2Button4.TabIndex = 88;
             guna2Button4.Text = "Delete";
+            guna2Button4.Click += guna2Button4_Click_1;
             // 
             // guna2HtmlLabel1
             // 
@@ -258,7 +260,7 @@
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel4.ForeColor = Color.Navy;
-            guna2HtmlLabel4.Location = new Point(781, 172);
+            guna2HtmlLabel4.Location = new Point(747, 172);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(113, 39);
             guna2HtmlLabel4.TabIndex = 92;
@@ -287,12 +289,12 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             Userguna2DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             Userguna2DataGridView.GridColor = Color.FromArgb(231, 229, 255);
-            Userguna2DataGridView.Location = new Point(581, 217);
+            Userguna2DataGridView.Location = new Point(516, 217);
             Userguna2DataGridView.Name = "Userguna2DataGridView";
             Userguna2DataGridView.RowHeadersVisible = false;
             Userguna2DataGridView.RowHeadersWidth = 51;
             Userguna2DataGridView.RowTemplate.Height = 29;
-            Userguna2DataGridView.Size = new Size(512, 449);
+            Userguna2DataGridView.Size = new Size(577, 449);
             Userguna2DataGridView.TabIndex = 93;
             Userguna2DataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             Userguna2DataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -315,6 +317,7 @@
             Userguna2DataGridView.ThemeStyle.RowsStyle.Height = 29;
             Userguna2DataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             Userguna2DataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            Userguna2DataGridView.CellContentClick += Userguna2DataGridView_CellContentClick;
             // 
             // guna2BorderlessForm1
             // 
@@ -368,6 +371,7 @@
             guna2HtmlLabel7.Size = new Size(18, 39);
             guna2HtmlLabel7.TabIndex = 96;
             guna2HtmlLabel7.Text = "x";
+            guna2HtmlLabel7.Click += guna2HtmlLabel7_Click_1;
             // 
             // guna2Panel2
             // 

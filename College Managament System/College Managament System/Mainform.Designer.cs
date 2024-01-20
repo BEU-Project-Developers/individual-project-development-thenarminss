@@ -65,6 +65,7 @@
             guna2HtmlLabel1.Size = new Size(18, 39);
             guna2HtmlLabel1.TabIndex = 95;
             guna2HtmlLabel1.Text = "x";
+            guna2HtmlLabel1.Click += guna2HtmlLabel1_Click;
             // 
             // guna2Panel1
             // 
@@ -107,6 +108,7 @@
             guna2Button1.Size = new Size(180, 56);
             guna2Button1.TabIndex = 100;
             guna2Button1.Text = "Student";
+            guna2Button1.Click += guna2Button1_Click_1;
             // 
             // guna2Button2
             // 
@@ -126,6 +128,7 @@
             guna2Button2.Size = new Size(180, 56);
             guna2Button2.TabIndex = 101;
             guna2Button2.Text = "Teacher";
+            guna2Button2.Click += guna2Button2_Click_1;
             // 
             // guna2Button3
             // 
@@ -145,6 +148,7 @@
             guna2Button3.Size = new Size(180, 56);
             guna2Button3.TabIndex = 102;
             guna2Button3.Text = "Users";
+            guna2Button3.Click += guna2Button3_Click_1;
             // 
             // guna2Button4
             // 
@@ -164,6 +168,7 @@
             guna2Button4.Size = new Size(180, 56);
             guna2Button4.TabIndex = 103;
             guna2Button4.Text = "Deparments";
+            guna2Button4.Click += guna2Button4_Click_1;
             // 
             // guna2Button5
             // 
@@ -183,6 +188,7 @@
             guna2Button5.Size = new Size(180, 56);
             guna2Button5.TabIndex = 104;
             guna2Button5.Text = "Fees";
+            guna2Button5.Click += guna2Button5_Click_1;
             // 
             // guna2Button6
             // 
@@ -202,6 +208,7 @@
             guna2Button6.Size = new Size(160, 48);
             guna2Button6.TabIndex = 105;
             guna2Button6.Text = "Logout";
+            guna2Button6.Click += guna2Button6_Click_1;
             // 
             // Mainform
             // 
