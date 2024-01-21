@@ -21,8 +21,6 @@ namespace College_Managament_System
 
             InitializeComponent();
 
-            // Set StdNameTextBox to be read-only
-            //StdNameTextBox.ReadOnly = true;
         }
 
 
@@ -30,6 +28,8 @@ namespace College_Managament_System
         {
             fillStdId();
             populate();
+            FeesDGV.SelectionChanged += FeesDGV_SelectionChanged;
+
         }
         private void fillStdId()
         {
@@ -51,27 +51,6 @@ namespace College_Managament_System
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
-            }
-        }
-        private void StdIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FetchData();
-        }
-        string StdName;
-            public void FetchData()// Method to fetch data for a selected Employee Id and update UI elements
-            {
-                
-                string query = "select * from StudentTable where StdId = '" + StdIdComboBox.SelectedValue.ToString() + "'";
-                SqlCommand cmd = new SqlCommand(query);
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    StdName = dr["StdName"].ToString();
-                    
-                    StdNameTextBox.Text = StdName;
-                
             }
         }
         private void populate()
@@ -117,62 +96,52 @@ namespace College_Managament_System
         {
 
         }
-        private void FeesDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FeesDGV_SelectionChanged(object sender, EventArgs e)
         {
-            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            if (FeesDGV.SelectedRows.Count > 0)
             {
-                printDocument1.Print();
-
+                if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    printDocument1.Print();
+                }
             }
         }
-
-
-        private void printPreviewDialog1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            Font font = new Font("Century Gothic", 25, FontStyle.Bold);
-            e.Graphics.DrawString("Fees Receipt", font, Brushes.Red, new Point(230, 10));
+            if (FeesDGV.SelectedRows.Count > 0)
+            {
+                Font font = new Font("Century Gothic", 25, FontStyle.Bold);
+                e.Graphics.DrawString("Fees Receipt", font, Brushes.Red, new Point(230, 10));
 
-            Font font1 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString("Receipt Number: ", font1, Brushes.Blue, new Point(40, 50));
-            Font font6 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[0].Value.ToString(), font6, Brushes.Black, new Point(300, 50));
+                Font font1 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString("Receipt Number: ", font1, Brushes.Blue, new Point(40, 50));
+                Font font6 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[0].Value.ToString(), font6, Brushes.Black, new Point(300, 50));
 
+                Font font2 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString("Student Usn: ", font2, Brushes.Blue, new Point(40, 80));
+                Font font7 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[1].Value.ToString(), font7, Brushes.Black, new Point(300, 80));
 
-            Font font2 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString("Student Usn: ", font2, Brushes.Blue, new Point(40, 80));
-            Font font7 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[1].Value.ToString(), font7, Brushes.Black, new Point(300, 80));
+                Font font3 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString("Student Name: ", font3, Brushes.Blue, new Point(40, 110));
+                Font font8 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[2].Value.ToString(), font8, Brushes.Black, new Point(300, 110));
 
+                Font font4 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString("Period: ", font4, Brushes.Blue, new Point(40, 140));
+                Font font9 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[3].Value.ToString(), font9, Brushes.Black, new Point(300, 140));
 
+                Font font5 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString("Amount: ", font5, Brushes.Blue, new Point(40, 170));
+                Font font10 = new Font("Century Gothic", 20, FontStyle.Bold);
+                e.Graphics.DrawString("Rs" + FeesDGV.SelectedRows[0].Cells[4].Value.ToString(), font10, Brushes.Black, new Point(300, 170));
 
-            Font font3 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString("Student Name: ", font3, Brushes.Blue, new Point(40, 110));
-            Font font8 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[2].Value.ToString(), font8, Brushes.Black, new Point(300, 110));
-
-
-
-            Font font4 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString("Period: ", font4, Brushes.Blue, new Point(40, 140));
-            Font font9 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[3].Value.ToString(), font9, Brushes.Black, new Point(300, 140));
-
-
-
-            Font font5 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString("Amount: ", font5, Brushes.Blue, new Point(40, 170));
-            Font font10 = new Font("Century Gothic", 20, FontStyle.Bold);
-            e.Graphics.DrawString("Rs" + FeesDGV.SelectedRows[0].Cells[4].Value.ToString(), font10, Brushes.Black, new Point(300, 170));
-
-            Font font11 = new Font("Century Gothic", 18, FontStyle.Bold);
-            e.Graphics.DrawString("Baku Engineering University", font11, Brushes.Red, new Point(230, 250));
+                Font font11 = new Font("Century Gothic", 18, FontStyle.Bold);
+                e.Graphics.DrawString("Baku Engineering University", font11, Brushes.Red, new Point(230, 250));
+            }
         }
-
         private void Button1_Click_1(object sender, EventArgs e)
         {
             try
@@ -195,7 +164,7 @@ namespace College_Managament_System
                         string insertQuery = $"insert into FeesTable values ({FeesNumTextBox.Text}, {StdIdComboBox.SelectedValue.ToString()}, '{StdNameTextBox.Text}', '{FeesDateTimePicker.Value.ToString("yyyy-MM-dd")}', {FeesAmountTextBox.Text})";
                         dbContext.ExecuteNonQuery(insertQuery);
 
-                        MessageBox.Show("Fees Successfully Payed");
+                        MessageBox.Show("Amount Successfully Payed");
                         populate();
                         updatestd();
                     }
@@ -206,7 +175,6 @@ namespace College_Managament_System
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
-
         private void Button2_Click(object sender, EventArgs e)
         {
             try
@@ -228,7 +196,6 @@ namespace College_Managament_System
                 MessageBox.Show("Fees Not Updated");
             }
         }
-
         private void Button3_Click(object sender, EventArgs e)
         {
             try
@@ -250,6 +217,36 @@ namespace College_Managament_System
                 MessageBox.Show("Ooops... Fees Not Deleted");
             }
         }
+        private void StdIdComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            try
+            {
+                string selectedStdId = StdIdComboBox.SelectedValue?.ToString();
+
+                if (string.IsNullOrEmpty(selectedStdId))
+                {
+                    MessageBox.Show("SelectedValue is null or empty.");
+                    return;
+                }
+
+                string query = $"select * from StudentTable where StdId = '{selectedStdId}'";
+                var dataTable = dbContext.ExecuteQuery(query);
+
+                if (dataTable != null && dataTable.Rows.Count > 0)
+                {
+                    StdNameTextBox.Text = dataTable.Rows[0]["StdName"]?.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No student found with the selected ID.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
     }
 }
 

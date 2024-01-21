@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Guna.UI2.WinForms;
+using System.Net.NetworkInformation;
 namespace College_Managament_System
 {
     public partial class Student : Form
@@ -42,25 +43,30 @@ namespace College_Managament_System
         private void populate()
         {
             string query = "select * from StudentTable";
-
             // Assuming dbContext is an instance of your DBContext class
             var dataTable = dbContext.ExecuteQuery(query);
-
             // Set the DataTable as the DataSource for your DataGridView
             StdDGV.DataSource = dataTable;
 
         }
         private void noduelist()
         {
-            string query = "select * from StudentTable where StdFees > ( '{0}')";
+            try
+            {
+                string query = "select * from StudentTable where StdFees > 0";
+                var dataTable = dbContext.ExecuteQuery(query);
 
-            // Assuming dbContext is an instance of your DBContext class
-            var dataTable = dbContext.ExecuteQuery(query);
-
-            // Set the DataTable as the DataSource for your DataGridView
-            StdDGV.DataSource = dataTable;
-
+                if (dataTable != null)
+                    StdDGV.DataSource = dataTable;
+                else
+                    MessageBox.Show("No records found.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
+
 
         private void StdDateTimePicker_ValueChanged(object sender, EventArgs e)
         {

@@ -314,7 +314,7 @@
             FeesDGV.ThemeStyle.RowsStyle.Height = 29;
             FeesDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             FeesDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            FeesDGV.CellContentClick += FeesDGV_CellContentClick;
+            //FeesDGV.CellContentClick += FeesDGV_CellContentClick;
             // 
             // Label9
             // 
@@ -442,6 +442,7 @@
             StdIdComboBox.ShadowDecoration.CustomizableEdges = customizableEdges22;
             StdIdComboBox.Size = new Size(258, 36);
             StdIdComboBox.TabIndex = 47;
+            StdIdComboBox.SelectionChangeCommitted += StdIdComboBox_SelectionChangeCommitted;
             // 
             // printPreviewDialog1
             // 
@@ -452,7 +453,7 @@
             printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
             printPreviewDialog1.Name = "printPreviewDialog1";
             printPreviewDialog1.Visible = false;
-            printPreviewDialog1.Load += printPreviewDialog1_Load;
+           // printPreviewDialog1.Load += printPreviewDialog1_Load;
             // 
             // printDocument1
             // 
