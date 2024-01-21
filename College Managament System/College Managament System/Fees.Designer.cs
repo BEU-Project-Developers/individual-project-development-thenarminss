@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fees));
             Button3 = new Guna.UI2.WinForms.Guna2Button();
             Label6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -85,7 +85,7 @@
             // 
             Button3.BackColor = Color.Transparent;
             Button3.BorderRadius = 8;
-            Button3.CustomizableEdges = customizableEdges23;
+            Button3.CustomizableEdges = customizableEdges1;
             Button3.DisabledState.BorderColor = Color.DarkGray;
             Button3.DisabledState.CustomBorderColor = Color.DarkGray;
             Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -95,10 +95,11 @@
             Button3.ForeColor = Color.White;
             Button3.Location = new Point(320, 580);
             Button3.Name = "Button3";
-            Button3.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            Button3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             Button3.Size = new Size(108, 36);
             Button3.TabIndex = 151;
             Button3.Text = "Delete";
+            Button3.Click += Button3_Click;
             // 
             // Label6
             // 
@@ -115,7 +116,7 @@
             // 
             Button2.BackColor = Color.Transparent;
             Button2.BorderRadius = 8;
-            Button2.CustomizableEdges = customizableEdges25;
+            Button2.CustomizableEdges = customizableEdges3;
             Button2.DisabledState.BorderColor = Color.DarkGray;
             Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -125,16 +126,17 @@
             Button2.ForeColor = Color.White;
             Button2.Location = new Point(178, 580);
             Button2.Name = "Button2";
-            Button2.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             Button2.Size = new Size(108, 36);
             Button2.TabIndex = 150;
             Button2.Text = "Edit";
+            Button2.Click += Button2_Click;
             // 
             // Button4
             // 
             Button4.BackColor = Color.Transparent;
             Button4.BorderRadius = 8;
-            Button4.CustomizableEdges = customizableEdges27;
+            Button4.CustomizableEdges = customizableEdges5;
             Button4.DisabledState.BorderColor = Color.DarkGray;
             Button4.DisabledState.CustomBorderColor = Color.DarkGray;
             Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -144,7 +146,7 @@
             Button4.ForeColor = Color.White;
             Button4.Location = new Point(178, 630);
             Button4.Name = "Button4";
-            Button4.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            Button4.ShadowDecoration.CustomizableEdges = customizableEdges6;
             Button4.Size = new Size(108, 36);
             Button4.TabIndex = 149;
             Button4.Text = "Home";
@@ -165,7 +167,7 @@
             // 
             Button1.BackColor = Color.Transparent;
             Button1.BorderRadius = 8;
-            Button1.CustomizableEdges = customizableEdges29;
+            Button1.CustomizableEdges = customizableEdges7;
             Button1.DisabledState.BorderColor = Color.DarkGray;
             Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -175,10 +177,11 @@
             Button1.ForeColor = Color.White;
             Button1.Location = new Point(35, 580);
             Button1.Name = "Button1";
-            Button1.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             Button1.Size = new Size(108, 36);
             Button1.TabIndex = 148;
             Button1.Text = "Pay";
+            Button1.Click += Button1_Click_1;
             // 
             // Label5
             // 
@@ -230,10 +233,10 @@
             FeesPanel1.Controls.Add(Label8);
             FeesPanel1.Controls.Add(Label6);
             FeesPanel1.Controls.Add(Label7);
-            FeesPanel1.CustomizableEdges = customizableEdges31;
+            FeesPanel1.CustomizableEdges = customizableEdges9;
             FeesPanel1.Location = new Point(0, 0);
             FeesPanel1.Name = "FeesPanel1";
-            FeesPanel1.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            FeesPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             FeesPanel1.Size = new Size(1128, 144);
             FeesPanel1.TabIndex = 141;
             // 
@@ -262,26 +265,26 @@
             // 
             // FeesDGV
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            FeesDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            FeesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            FeesDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            FeesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             FeesDGV.ColumnHeadersHeight = 30;
             FeesDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            FeesDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            FeesDGV.DefaultCellStyle = dataGridViewCellStyle3;
             FeesDGV.GridColor = Color.FromArgb(231, 229, 255);
             FeesDGV.Location = new Point(579, 217);
             FeesDGV.Name = "FeesDGV";
@@ -328,7 +331,7 @@
             // 
             FeesAmountTextBox.BackColor = Color.Transparent;
             FeesAmountTextBox.BorderRadius = 8;
-            FeesAmountTextBox.CustomizableEdges = customizableEdges33;
+            FeesAmountTextBox.CustomizableEdges = customizableEdges11;
             FeesAmountTextBox.DefaultText = "";
             FeesAmountTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             FeesAmountTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -343,7 +346,7 @@
             FeesAmountTextBox.PasswordChar = '\0';
             FeesAmountTextBox.PlaceholderText = "";
             FeesAmountTextBox.SelectedText = "";
-            FeesAmountTextBox.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            FeesAmountTextBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
             FeesAmountTextBox.Size = new Size(258, 36);
             FeesAmountTextBox.TabIndex = 137;
             // 
@@ -351,7 +354,7 @@
             // 
             FeesNumTextBox.BackColor = Color.Transparent;
             FeesNumTextBox.BorderRadius = 8;
-            FeesNumTextBox.CustomizableEdges = customizableEdges35;
+            FeesNumTextBox.CustomizableEdges = customizableEdges13;
             FeesNumTextBox.DefaultText = "";
             FeesNumTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             FeesNumTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -366,7 +369,7 @@
             FeesNumTextBox.PasswordChar = '\0';
             FeesNumTextBox.PlaceholderText = "";
             FeesNumTextBox.SelectedText = "";
-            FeesNumTextBox.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            FeesNumTextBox.ShadowDecoration.CustomizableEdges = customizableEdges14;
             FeesNumTextBox.Size = new Size(258, 36);
             FeesNumTextBox.TabIndex = 136;
             // 
@@ -374,7 +377,7 @@
             // 
             FeesDateTimePicker.BorderRadius = 8;
             FeesDateTimePicker.Checked = true;
-            FeesDateTimePicker.CustomizableEdges = customizableEdges37;
+            FeesDateTimePicker.CustomizableEdges = customizableEdges15;
             FeesDateTimePicker.FillColor = Color.DodgerBlue;
             FeesDateTimePicker.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FeesDateTimePicker.ForeColor = Color.White;
@@ -383,7 +386,7 @@
             FeesDateTimePicker.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             FeesDateTimePicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             FeesDateTimePicker.Name = "FeesDateTimePicker";
-            FeesDateTimePicker.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            FeesDateTimePicker.ShadowDecoration.CustomizableEdges = customizableEdges16;
             FeesDateTimePicker.Size = new Size(258, 36);
             FeesDateTimePicker.TabIndex = 132;
             FeesDateTimePicker.Value = new DateTime(2024, 1, 18, 23, 0, 25, 399);
@@ -393,7 +396,7 @@
             // 
             StdNameTextBox.BackColor = Color.Transparent;
             StdNameTextBox.BorderRadius = 8;
-            StdNameTextBox.CustomizableEdges = customizableEdges39;
+            StdNameTextBox.CustomizableEdges = customizableEdges17;
             StdNameTextBox.DefaultText = "";
             StdNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             StdNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -408,17 +411,17 @@
             StdNameTextBox.PasswordChar = '\0';
             StdNameTextBox.PlaceholderText = "";
             StdNameTextBox.SelectedText = "";
-            StdNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            StdNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges18;
             StdNameTextBox.Size = new Size(258, 36);
             StdNameTextBox.TabIndex = 152;
             // 
             // FeesPanel2
             // 
             FeesPanel2.BackColor = Color.Navy;
-            FeesPanel2.CustomizableEdges = customizableEdges41;
+            FeesPanel2.CustomizableEdges = customizableEdges19;
             FeesPanel2.Location = new Point(0, 696);
             FeesPanel2.Name = "FeesPanel2";
-            FeesPanel2.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            FeesPanel2.ShadowDecoration.CustomizableEdges = customizableEdges20;
             FeesPanel2.Size = new Size(1128, 16);
             FeesPanel2.TabIndex = 153;
             // 
@@ -426,7 +429,7 @@
             // 
             StdIdComboBox.BackColor = Color.Transparent;
             StdIdComboBox.BorderRadius = 8;
-            StdIdComboBox.CustomizableEdges = customizableEdges43;
+            StdIdComboBox.CustomizableEdges = customizableEdges21;
             StdIdComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             StdIdComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             StdIdComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -436,7 +439,7 @@
             StdIdComboBox.ItemHeight = 30;
             StdIdComboBox.Location = new Point(170, 225);
             StdIdComboBox.Name = "StdIdComboBox";
-            StdIdComboBox.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            StdIdComboBox.ShadowDecoration.CustomizableEdges = customizableEdges22;
             StdIdComboBox.Size = new Size(258, 36);
             StdIdComboBox.TabIndex = 47;
             // 

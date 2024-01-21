@@ -22,7 +22,7 @@ namespace College_Managament_System
             InitializeComponent();
 
             // Set StdNameTextBox to be read-only
-            StdNameTextBox.ReadOnly = true;
+            //StdNameTextBox.ReadOnly = true;
         }
 
 
@@ -55,36 +55,25 @@ namespace College_Managament_System
         }
         private void StdIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
+            FetchData();
+        }
+        string StdName;
+            public void FetchData()// Method to fetch data for a selected Employee Id and update UI elements
             {
-                if (StdIdComboBox.SelectedValue != null)
+                
+                string query = "select * from StudentTable where StdId = '" + StdIdComboBox.SelectedValue.ToString() + "'";
+                SqlCommand cmd = new SqlCommand(query);
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
                 {
-                    string selectedStdId = StdIdComboBox.SelectedValue.ToString();
-                    string query = $"select StdName from StudentTable where StdId = '{selectedStdId}'";
-                    DataTable dt = dbContext.ExecuteQuery(query);
-
-                    if (dt.Rows.Count > 0)
-                    {
-                        StdNameTextBox.Text = dt.Rows[0]["StdName"]?.ToString() ?? string.Empty;
-                    }
-                    else
-                    {
-                        MessageBox.Show("No student found with the selected ID.");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("SelectedValue is null.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                    StdName = dr["StdName"].ToString();
+                    
+                    StdNameTextBox.Text = StdName;
+                
             }
         }
-
-
-
         private void populate()
         {
             string query = "select * from FeesTable";
@@ -133,9 +122,58 @@ namespace College_Managament_System
             if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();
+
             }
         }
-        private void Button1_Click(object sender, EventArgs e)
+
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Font font = new Font("Century Gothic", 25, FontStyle.Bold);
+            e.Graphics.DrawString("Fees Receipt", font, Brushes.Red, new Point(230, 10));
+
+            Font font1 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString("Receipt Number: ", font1, Brushes.Blue, new Point(40, 50));
+            Font font6 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[0].Value.ToString(), font6, Brushes.Black, new Point(300, 50));
+
+
+            Font font2 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString("Student Usn: ", font2, Brushes.Blue, new Point(40, 80));
+            Font font7 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[1].Value.ToString(), font7, Brushes.Black, new Point(300, 80));
+
+
+
+            Font font3 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString("Student Name: ", font3, Brushes.Blue, new Point(40, 110));
+            Font font8 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[2].Value.ToString(), font8, Brushes.Black, new Point(300, 110));
+
+
+
+            Font font4 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString("Period: ", font4, Brushes.Blue, new Point(40, 140));
+            Font font9 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString(FeesDGV.SelectedRows[0].Cells[3].Value.ToString(), font9, Brushes.Black, new Point(300, 140));
+
+
+
+            Font font5 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString("Amount: ", font5, Brushes.Blue, new Point(40, 170));
+            Font font10 = new Font("Century Gothic", 20, FontStyle.Bold);
+            e.Graphics.DrawString("Rs" + FeesDGV.SelectedRows[0].Cells[4].Value.ToString(), font10, Brushes.Black, new Point(300, 170));
+
+            Font font11 = new Font("Century Gothic", 18, FontStyle.Bold);
+            e.Graphics.DrawString("Baku Engineering University", font11, Brushes.Red, new Point(230, 250));
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -157,7 +195,7 @@ namespace College_Managament_System
                         string insertQuery = $"insert into FeesTable values ({FeesNumTextBox.Text}, {StdIdComboBox.SelectedValue.ToString()}, '{StdNameTextBox.Text}', '{FeesDateTimePicker.Value.ToString("yyyy-MM-dd")}', {FeesAmountTextBox.Text})";
                         dbContext.ExecuteNonQuery(insertQuery);
 
-                        MessageBox.Show("Fees Successfully Added");
+                        MessageBox.Show("Fees Successfully Payed");
                         populate();
                         updatestd();
                     }
@@ -169,20 +207,49 @@ namespace College_Managament_System
             }
         }
 
-        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                if (FeesNumTextBox.Text == "" || StdNameTextBox.Text == "" || FeesAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("Missing Data");
+                }
+                else
+                {
+                    string query = $"update FeesTable set StdId = '{StdIdComboBox.Text}', StdName = '{StdNameTextBox.Text}', Period = '{FeesDateTimePicker.Text}', Amount = '{FeesAmountTextBox.Text}',' where FeesNum = '{FeesNumTextBox.Text}'";
+                    dbContext.ExecuteNonQuery(query);
+                    MessageBox.Show("Fees Updated Successfully");
+                    populate();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Fees Not Updated");
+            }
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
-            // Specify a valid font family, for example, "Century Gothic"
-            Font font = new Font("Century Gothic", 25, FontStyle.Bold);
-
-            // Use Brushes.Blue instead of Brushes.DarkBlue
-            e.Graphics.DrawString("Fees Receipt", font, Brushes.Blue, new Point(230, 10));
+            try
+            {
+                if (FeesNumTextBox.Text == "")
+                {
+                    MessageBox.Show("Enter The Fee's Num");
+                }
+                else
+                {
+                    string query = $"delete from StudentTable where FeesNum = ( '{FeesNumTextBox.Text}')";
+                    dbContext.ExecuteNonQuery(query);
+                    MessageBox.Show("Fees Deleted Successfuly");
+                    populate();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ooops... Fees Not Deleted");
+            }
         }
-
     }
 }
 
