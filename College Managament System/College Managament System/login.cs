@@ -35,28 +35,33 @@ namespace College_Managament_System
         {
 
         }
-
         private void Button1_Click_1(object sender, EventArgs e)
         {
             //Mainform Mform = new Mainform();
             //Mform.Show();
             //this.Hide();
-            Mainform Home = new Mainform();
-            string query = "select count (*) from UserTable where UserName =('{guna2TextBox1.Text}') , Password =('{guna2TextBox2.Text}') ";
-            SqlCommand cmd = new SqlCommand(query);
-            DataTable dt = new DataTable();
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            try
             {
-                Home.Show();
-                this.Hide();
+                Mainform Home = new Mainform();
+                string query = $"select count(*) from UserTable where UserName = '{ UserNameTextBox.Text}' and Password = '{PasswordTextBox.Text}'";
+                DataTable dt = dbContext.ExecuteQuery(query);
+
+                if (dt.Rows.Count > 0 && dt.Rows[0][0].ToString() == "1")
+                {
+                    Home.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong UserName or Password");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Wrong UserName or Password");
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
+
 
         private void Label2_Click_1(object sender, EventArgs e)
         {

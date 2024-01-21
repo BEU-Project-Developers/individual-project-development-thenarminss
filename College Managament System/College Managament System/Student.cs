@@ -50,6 +50,17 @@ namespace College_Managament_System
             StdDGV.DataSource = dataTable;
 
         }
+        private void noduelist()
+        {
+            string query = "select * from StudentTable where StdFees > ( '{0}')";
+
+            // Assuming dbContext is an instance of your DBContext class
+            var dataTable = dbContext.ExecuteQuery(query);
+
+            // Set the DataTable as the DataSource for your DataGridView
+            StdDGV.DataSource = dataTable;
+
+        }
 
         private void StdDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
@@ -59,7 +70,7 @@ namespace College_Managament_System
         {
             Application.Exit();
         }
-        private void Button3_Click_1(object sender, EventArgs e)
+        private void Button2_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -82,7 +93,7 @@ namespace College_Managament_System
         }
 
 
-        private void Button2_Click_1(object sender, EventArgs e)
+        private void Button3_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -140,6 +151,16 @@ namespace College_Managament_System
             {
                 MessageBox.Show("Something Went Wrong");
             }
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            noduelist();
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            populate();
         }
     }
 }

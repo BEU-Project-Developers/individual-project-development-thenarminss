@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Label11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Label9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Label10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -117,10 +117,10 @@
             // DashPanel2
             // 
             DashPanel2.BackColor = Color.Navy;
-            DashPanel2.CustomizableEdges = customizableEdges21;
+            DashPanel2.CustomizableEdges = customizableEdges1;
             DashPanel2.Location = new Point(0, 696);
             DashPanel2.Name = "DashPanel2";
-            DashPanel2.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            DashPanel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             DashPanel2.Size = new Size(1128, 16);
             DashPanel2.TabIndex = 107;
             // 
@@ -130,10 +130,10 @@
             DashPanel1.Controls.Add(Label11);
             DashPanel1.Controls.Add(Label9);
             DashPanel1.Controls.Add(Label10);
-            DashPanel1.CustomizableEdges = customizableEdges23;
+            DashPanel1.CustomizableEdges = customizableEdges3;
             DashPanel1.Location = new Point(0, 0);
             DashPanel1.Name = "DashPanel1";
-            DashPanel1.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            DashPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             DashPanel1.Size = new Size(1128, 144);
             DashPanel1.TabIndex = 106;
             // 
@@ -142,11 +142,11 @@
             DashStdPanel.BackColor = Color.Transparent;
             DashStdPanel.Controls.Add(Label5);
             DashStdPanel.Controls.Add(DashStdPanel1);
-            DashStdPanel.CustomizableEdges = customizableEdges27;
+            DashStdPanel.CustomizableEdges = customizableEdges7;
             DashStdPanel.FillColor = Color.DeepPink;
             DashStdPanel.Location = new Point(65, 212);
             DashStdPanel.Name = "DashStdPanel";
-            DashStdPanel.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            DashStdPanel.ShadowDecoration.CustomizableEdges = customizableEdges8;
             DashStdPanel.Size = new Size(320, 180);
             DashStdPanel.TabIndex = 108;
             // 
@@ -165,11 +165,11 @@
             // 
             DashStdPanel1.BackColor = Color.Transparent;
             DashStdPanel1.Controls.Add(Label1);
-            DashStdPanel1.CustomizableEdges = customizableEdges25;
+            DashStdPanel1.CustomizableEdges = customizableEdges5;
             DashStdPanel1.FillColor = Color.HotPink;
             DashStdPanel1.Location = new Point(0, 140);
             DashStdPanel1.Name = "DashStdPanel1";
-            DashStdPanel1.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            DashStdPanel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             DashStdPanel1.Size = new Size(320, 80);
             DashStdPanel1.TabIndex = 110;
             // 
@@ -189,11 +189,11 @@
             DashFeesPanel.BackColor = Color.Transparent;
             DashFeesPanel.Controls.Add(Label7);
             DashFeesPanel.Controls.Add(DashFeesPanel1);
-            DashFeesPanel.CustomizableEdges = customizableEdges31;
+            DashFeesPanel.CustomizableEdges = customizableEdges11;
             DashFeesPanel.FillColor = Color.Indigo;
             DashFeesPanel.Location = new Point(65, 450);
             DashFeesPanel.Name = "DashFeesPanel";
-            DashFeesPanel.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            DashFeesPanel.ShadowDecoration.CustomizableEdges = customizableEdges12;
             DashFeesPanel.Size = new Size(320, 180);
             DashFeesPanel.TabIndex = 109;
             // 
@@ -212,11 +212,11 @@
             // 
             DashFeesPanel1.BackColor = Color.Transparent;
             DashFeesPanel1.Controls.Add(Label3);
-            DashFeesPanel1.CustomizableEdges = customizableEdges29;
+            DashFeesPanel1.CustomizableEdges = customizableEdges9;
             DashFeesPanel1.FillColor = Color.BlueViolet;
             DashFeesPanel1.Location = new Point(0, 140);
             DashFeesPanel1.Name = "DashFeesPanel1";
-            DashFeesPanel1.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            DashFeesPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             DashFeesPanel1.Size = new Size(320, 80);
             DashFeesPanel1.TabIndex = 110;
             // 
@@ -236,11 +236,11 @@
             DashDepPanel.BackColor = Color.Transparent;
             DashDepPanel.Controls.Add(Label8);
             DashDepPanel.Controls.Add(DashDepPanel1);
-            DashDepPanel.CustomizableEdges = customizableEdges35;
+            DashDepPanel.CustomizableEdges = customizableEdges15;
             DashDepPanel.FillColor = Color.DarkGreen;
             DashDepPanel.Location = new Point(745, 450);
             DashDepPanel.Name = "DashDepPanel";
-            DashDepPanel.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            DashDepPanel.ShadowDecoration.CustomizableEdges = customizableEdges16;
             DashDepPanel.Size = new Size(320, 180);
             DashDepPanel.TabIndex = 109;
             // 
@@ -259,11 +259,11 @@
             // 
             DashDepPanel1.BackColor = Color.Transparent;
             DashDepPanel1.Controls.Add(Label4);
-            DashDepPanel1.CustomizableEdges = customizableEdges33;
+            DashDepPanel1.CustomizableEdges = customizableEdges13;
             DashDepPanel1.FillColor = Color.Green;
             DashDepPanel1.Location = new Point(0, 140);
             DashDepPanel1.Name = "DashDepPanel1";
-            DashDepPanel1.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            DashDepPanel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             DashDepPanel1.Size = new Size(320, 80);
             DashDepPanel1.TabIndex = 110;
             // 
@@ -283,11 +283,11 @@
             DashTeacherPanel.BackColor = Color.Transparent;
             DashTeacherPanel.Controls.Add(Label6);
             DashTeacherPanel.Controls.Add(DashTeacherPanel1);
-            DashTeacherPanel.CustomizableEdges = customizableEdges39;
+            DashTeacherPanel.CustomizableEdges = customizableEdges19;
             DashTeacherPanel.FillColor = Color.OrangeRed;
             DashTeacherPanel.Location = new Point(745, 212);
             DashTeacherPanel.Name = "DashTeacherPanel";
-            DashTeacherPanel.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            DashTeacherPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
             DashTeacherPanel.Size = new Size(320, 180);
             DashTeacherPanel.TabIndex = 109;
             // 
@@ -306,11 +306,11 @@
             // 
             DashTeacherPanel1.BackColor = Color.Transparent;
             DashTeacherPanel1.Controls.Add(Label2);
-            DashTeacherPanel1.CustomizableEdges = customizableEdges37;
+            DashTeacherPanel1.CustomizableEdges = customizableEdges17;
             DashTeacherPanel1.FillColor = Color.Coral;
             DashTeacherPanel1.Location = new Point(0, 140);
             DashTeacherPanel1.Name = "DashTeacherPanel1";
-            DashTeacherPanel1.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            DashTeacherPanel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             DashTeacherPanel1.Size = new Size(320, 80);
             DashTeacherPanel1.TabIndex = 110;
             // 

@@ -53,6 +53,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fees));
             Button3 = new Guna.UI2.WinForms.Guna2Button();
             Label6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -71,9 +72,11 @@
             FeesAmountTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             FeesNumTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             FeesDateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            FeesNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            StdNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             FeesPanel2 = new Guna.UI2.WinForms.Guna2Panel();
             StdIdComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            printPreviewDialog1 = new PrintPreviewDialog();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             FeesPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)FeesDGV).BeginInit();
             SuspendLayout();
@@ -269,7 +272,7 @@
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
             FeesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            FeesDGV.ColumnHeadersHeight = 4;
+            FeesDGV.ColumnHeadersHeight = 30;
             FeesDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.White;
@@ -299,7 +302,7 @@
             FeesDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FeesDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             FeesDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            FeesDGV.ThemeStyle.HeaderStyle.Height = 4;
+            FeesDGV.ThemeStyle.HeaderStyle.Height = 30;
             FeesDGV.ThemeStyle.ReadOnly = false;
             FeesDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
             FeesDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -386,28 +389,28 @@
             FeesDateTimePicker.Value = new DateTime(2024, 1, 18, 23, 0, 25, 399);
             FeesDateTimePicker.ValueChanged += FeesDateTimePicker_ValueChanged;
             // 
-            // FeesNameTextBox
+            // StdNameTextBox
             // 
-            FeesNameTextBox.BackColor = Color.Transparent;
-            FeesNameTextBox.BorderRadius = 8;
-            FeesNameTextBox.CustomizableEdges = customizableEdges39;
-            FeesNameTextBox.DefaultText = "";
-            FeesNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            FeesNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            FeesNameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            FeesNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            FeesNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            FeesNameTextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            FeesNameTextBox.ForeColor = Color.Navy;
-            FeesNameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            FeesNameTextBox.Location = new Point(170, 282);
-            FeesNameTextBox.Name = "FeesNameTextBox";
-            FeesNameTextBox.PasswordChar = '\0';
-            FeesNameTextBox.PlaceholderText = "";
-            FeesNameTextBox.SelectedText = "";
-            FeesNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            FeesNameTextBox.Size = new Size(258, 36);
-            FeesNameTextBox.TabIndex = 152;
+            StdNameTextBox.BackColor = Color.Transparent;
+            StdNameTextBox.BorderRadius = 8;
+            StdNameTextBox.CustomizableEdges = customizableEdges39;
+            StdNameTextBox.DefaultText = "";
+            StdNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            StdNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            StdNameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            StdNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            StdNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            StdNameTextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            StdNameTextBox.ForeColor = Color.Navy;
+            StdNameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            StdNameTextBox.Location = new Point(170, 282);
+            StdNameTextBox.Name = "StdNameTextBox";
+            StdNameTextBox.PasswordChar = '\0';
+            StdNameTextBox.PlaceholderText = "";
+            StdNameTextBox.SelectedText = "";
+            StdNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            StdNameTextBox.Size = new Size(258, 36);
+            StdNameTextBox.TabIndex = 152;
             // 
             // FeesPanel2
             // 
@@ -437,6 +440,21 @@
             StdIdComboBox.Size = new Size(258, 36);
             StdIdComboBox.TabIndex = 47;
             // 
+            // printPreviewDialog1
+            // 
+            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialog1.ClientSize = new Size(400, 300);
+            printPreviewDialog1.Enabled = true;
+            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+            printPreviewDialog1.Name = "printPreviewDialog1";
+            printPreviewDialog1.Visible = false;
+            printPreviewDialog1.Load += printPreviewDialog1_Load;
+            // 
+            // printDocument1
+            // 
+            printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
             // Fees
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -445,7 +463,7 @@
             ClientSize = new Size(1128, 712);
             Controls.Add(StdIdComboBox);
             Controls.Add(FeesPanel2);
-            Controls.Add(FeesNameTextBox);
+            Controls.Add(StdNameTextBox);
             Controls.Add(Button3);
             Controls.Add(Button2);
             Controls.Add(Button4);
@@ -491,9 +509,11 @@
         private Guna.UI2.WinForms.Guna2TextBox FeesAmountTextBox;
         private Guna.UI2.WinForms.Guna2TextBox FeesNumTextBox;
         private Guna.UI2.WinForms.Guna2DateTimePicker FeesDateTimePicker;
-        private Guna.UI2.WinForms.Guna2TextBox FeesNameTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox StdNameTextBox;
         private Guna.UI2.WinForms.Guna2Panel FeesPanel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel Label8;
         private Guna.UI2.WinForms.Guna2ComboBox StdIdComboBox;
+        private PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

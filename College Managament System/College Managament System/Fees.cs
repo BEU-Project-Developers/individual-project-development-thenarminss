@@ -18,43 +18,72 @@ namespace College_Managament_System
         private readonly DatabaseContext dbContext = new DatabaseContext();
         public Fees()
         {
+
             InitializeComponent();
+
+            // Set StdNameTextBox to be read-only
+            StdNameTextBox.ReadOnly = true;
         }
+
 
         private void Fees_Load(object sender, EventArgs e)
         {
-            fillDepartment();
+            fillStdId();
             populate();
         }
-        private void fillDepartment()
+        private void fillStdId()
         {
-            string query = "select StdId from StudentTable";
-            var dataTable = dbContext.ExecuteQuery(query);
+            try
+            {
+                string query = "select StdId from StudentTable";
+                DataTable dt = dbContext.ExecuteQuery(query);
 
-            if (dataTable != null && dataTable.Rows.Count > 0)
-            {
-                StdIdComboBox.ValueMember = "StdId";
-                StdIdComboBox.DataSource = dataTable;
+                if (dt.Rows.Count > 0)
+                {
+                    StdIdComboBox.ValueMember = "StdId";
+                    StdIdComboBox.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("No students found.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                // Handle the case when there is no data in the StudentTable
-                MessageBox.Show("No Students found.");
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+        private void StdIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (StdIdComboBox.SelectedValue != null)
+                {
+                    string selectedStdId = StdIdComboBox.SelectedValue.ToString();
+                    string query = $"select StdName from StudentTable where StdId = '{selectedStdId}'";
+                    DataTable dt = dbContext.ExecuteQuery(query);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        StdNameTextBox.Text = dt.Rows[0]["StdName"]?.ToString() ?? string.Empty;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No student found with the selected ID.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("SelectedValue is null.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
 
-        private void StdIdComboBox_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            string query = "select * from StudentTable where StdId = ('{StdIdComboBox.SelectedValue.ToString()}')";
-            SqlCommand cmd = new SqlCommand(query);
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                FeesNameTextBox.Text = dr["StdName"].ToString();
-            }
-        }
+
 
         private void populate()
         {
@@ -71,74 +100,90 @@ namespace College_Managament_System
         {
 
         }
-
-
-
         private void updatestd()
         {
-            string query = $"update StudentTable set StdFees = ('{FeesAmountTextBox.Text}') where StdId = ('{StdIdComboBox.SelectedValue.ToString()}')";
-            dbContext.ExecuteNonQuery(query);
-            //MessageBox.Show("User Updated Successfully");
-            //populate();
+            try
+            {
+                string query = $"update StudentTable set StdFees = '{FeesAmountTextBox.Text}' where StdId = '{StdIdComboBox.SelectedValue.ToString()}'";
+                dbContext.ExecuteNonQuery(query);
+                //populate();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
+
         private void Button4_Click(object sender, EventArgs e)
         {
             Mainform home = new Mainform();
             home.Show();
             this.Hide();
         }
-
-
         private void Label8_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void FeesDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
 
         }
-
         private void FeesDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (FeesNumTextBox.Text == "" || StdNameTextBox.Text == "" || FeesAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("Missing Information");
+                }
+                else
+                {
+                    string countQuery = $"select count(*) from FeesTable where StdId = {StdIdComboBox.SelectedValue.ToString()} and Period = '{FeesDateTimePicker.Value.ToString("yyyy-MM-dd")}'";
+                    int rowCount = (int)dbContext.ExecuteNonQuery(countQuery);
 
+                    if (rowCount == 1)
+                    {
+                        MessageBox.Show("No Dues For The Selected Period");
+                    }
+                    else
+                    {
+                        string insertQuery = $"insert into FeesTable values ({FeesNumTextBox.Text}, {StdIdComboBox.SelectedValue.ToString()}, '{StdNameTextBox.Text}', '{FeesDateTimePicker.Value.ToString("yyyy-MM-dd")}', {FeesAmountTextBox.Text})";
+                        dbContext.ExecuteNonQuery(insertQuery);
+
+                        MessageBox.Show("Fees Successfully Added");
+                        populate();
+                        updatestd();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
 
-//        private void Button1_Click(object sender, EventArgs e)
-//{
-//    try
-//    {
-//        if (FNumguna2TextBox.Text == "" || FNameguna2TextBox.Text == "" || FAmountguna2TextBox.Text == "")
-//        {
-//            MessageBox.Show("Missing Information");
-//        }
-//        else
-//        {
-//                    SqlDataAdapter da = new SqlDataAdapter("select count(*) from FeesTable where StdId = {guna2ComboBox1.SelectedValue.ToString()} and Period = '{guna2DateTimePicker1.Value.ToString("yyyy - MM - dd")}'"); ;
-//            DataTable dt = new DataTable();
-//            da.Fill(dt);
-//            if (dt.Rows[0][0].ToString() == "1")
-//            {
-//                MessageBox.Show("No Dues For The Selected Period");
-//            }
-//            else
-//            {
-//                // Corrected SQL syntax and date formatting
-//                string query = $"insert into FeesTable values ({FNumguna2TextBox.Text}, {guna2ComboBox1.SelectedValue.ToString()}, '{FNameguna2TextBox.Text}', '{guna2DateTimePicker1.Value.ToString("yyyy-MM-dd")}', {FAmountguna2TextBox.Text})";
-//                SqlCommand cmd = new SqlCommand(query);
-//                cmd.ExecuteNonQuery();
-//                MessageBox.Show("Fees Successfully Added");
-//                populate();
-//                updatestd();
-//            }
-//        }
-//    }
-//    catch (Exception ex)
-//    {
-//        MessageBox.Show($"An error occurred: {ex.Message}");
-//    }
-}
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            // Specify a valid font family, for example, "Century Gothic"
+            Font font = new Font("Century Gothic", 25, FontStyle.Bold);
+
+            // Use Brushes.Blue instead of Brushes.DarkBlue
+            e.Graphics.DrawString("Fees Receipt", font, Brushes.Blue, new Point(230, 10));
+        }
 
     }
-//}
+}
+
   
