@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Guna.UI2.WinForms;
 using static System.Windows.Forms.AxHost;
+using System.Collections;
 
 namespace College_Managament_System
 {
@@ -26,6 +27,7 @@ namespace College_Managament_System
 
         private void Fees_Load(object sender, EventArgs e)
         {
+            // Load the student IDs and populate the DataGridView
             fillStdId();
             populate();
             FeesDGV.SelectionChanged += FeesDGV_SelectionChanged;
@@ -35,11 +37,13 @@ namespace College_Managament_System
         {
             try
             {
+                // Query to get student IDs from the StudentTable
                 string query = "select StdId from StudentTable";
                 DataTable dt = dbContext.ExecuteQuery(query);
 
                 if (dt.Rows.Count > 0)
                 {
+                    // Set student IDs as the ValueMember for the ComboBox
                     StdIdComboBox.ValueMember = "StdId";
                     StdIdComboBox.DataSource = dt;
                 }
@@ -55,6 +59,7 @@ namespace College_Managament_System
         }
         private void populate()
         {
+            // Query to get all records from FeesTable
             string query = "select * from FeesTable";
 
             // Assuming dbContext is an instance of your DBContext class
@@ -72,6 +77,7 @@ namespace College_Managament_System
         {
             try
             {
+                // Update the student's fees in the StudentTable
                 string query = $"update StudentTable set StdFees = '{FeesAmountTextBox.Text}' where StdId = '{StdIdComboBox.SelectedValue.ToString()}'";
                 dbContext.ExecuteNonQuery(query);
                 //populate();
@@ -84,6 +90,7 @@ namespace College_Managament_System
 
         private void Button4_Click(object sender, EventArgs e)
         {
+            // Return to the main form
             Mainform home = new Mainform();
             home.Show();
             this.Hide();
@@ -94,10 +101,11 @@ namespace College_Managament_System
         }
         private void FeesDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-
+            // Handle the change in the date picker if needed
         }
         private void FeesDGV_SelectionChanged(object sender, EventArgs e)
         {
+            // Show print preview dialog when a cell is clicked
             if (FeesDGV.SelectedRows.Count > 0)
             {
                 if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
@@ -146,12 +154,14 @@ namespace College_Managament_System
         {
             try
             {
+
                 if (FeesNumTextBox.Text == "" || StdNameTextBox.Text == "" || FeesAmountTextBox.Text == "")
                 {
                     MessageBox.Show("Missing Information");
                 }
                 else
                 {
+                    // Check if there are no dues for the selected period
                     string countQuery = $"select count(*) from FeesTable where StdId = {StdIdComboBox.SelectedValue.ToString()} and Period = '{FeesDateTimePicker.Value.ToString("yyyy-MM-dd")}'";
                     int rowCount = (int)dbContext.ExecuteNonQuery(countQuery);
 
@@ -161,9 +171,11 @@ namespace College_Managament_System
                     }
                     else
                     {
+                        // Insert fees information into FeesTable
                         string insertQuery = $"insert into FeesTable values ({FeesNumTextBox.Text}, {StdIdComboBox.SelectedValue.ToString()}, '{StdNameTextBox.Text}', '{FeesDateTimePicker.Value.ToString("yyyy-MM-dd")}', {FeesAmountTextBox.Text})";
                         dbContext.ExecuteNonQuery(insertQuery);
 
+                        // Refresh DataGridView and update student fees
                         MessageBox.Show("Amount Successfully Payed");
                         populate();
                         updatestd();
@@ -221,6 +233,7 @@ namespace College_Managament_System
         {
             try
             {
+                // Get selected student ID
                 string selectedStdId = StdIdComboBox.SelectedValue?.ToString();
 
                 if (string.IsNullOrEmpty(selectedStdId))
@@ -229,11 +242,13 @@ namespace College_Managament_System
                     return;
                 }
 
+                // Query to get student details based on selected ID
                 string query = $"select * from StudentTable where StdId = '{selectedStdId}'";
                 var dataTable = dbContext.ExecuteQuery(query);
 
                 if (dataTable != null && dataTable.Rows.Count > 0)
                 {
+                    // Set student name based on the retrieved data
                     StdNameTextBox.Text = dataTable.Rows[0]["StdName"]?.ToString();
                 }
                 else
