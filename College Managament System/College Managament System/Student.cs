@@ -43,7 +43,6 @@ namespace College_Managament_System
         private void populate()
         {
             string query = "select * from StudentTable";
-            // Assuming dbContext is an instance of your DBContext class
             var dataTable = dbContext.ExecuteQuery(query);
             // Set the DataTable as the DataSource for your DataGridView
             StdDGV.DataSource = dataTable;

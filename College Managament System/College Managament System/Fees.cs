@@ -62,7 +62,6 @@ namespace College_Managament_System
             // Query to get all records from FeesTable
             string query = "select * from FeesTable";
 
-            // Assuming dbContext is an instance of your DBContext class
             var dataTable = dbContext.ExecuteQuery(query);
 
             // Set the DataTable as the DataSource for your DataGridView

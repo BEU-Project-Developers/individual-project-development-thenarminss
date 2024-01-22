@@ -51,7 +51,6 @@ namespace College_Managament_System
             // Fetch all records from the TeacherTable and display them in the DataGridView
             string query = "select * from TeacherTable";
 
-            // Assuming dbContext is an instance of your DBContext class
             var dataTable = dbContext.ExecuteQuery(query);
 
             // Set the DataTable as the DataSource for your DataGridView
